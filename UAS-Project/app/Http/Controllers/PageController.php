@@ -34,4 +34,8 @@ class PageController extends Controller
     {
         return view('karier');
     }
+    public function sekolahKami()
+    {
+        return view('sekolah-kami');
+    }
 }

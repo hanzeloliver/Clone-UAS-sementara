@@ -14,3 +14,12 @@ Route::get('/sekolah-kami', [SekolahKamiController::class, 'index'])->name('seko
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran');
 Route::get('/kehidupan-siswa', [KehidupanSiswaController::class, 'index'])->name('kehidupan-siswa');
 Route::get('/karier', [KarierController::class, 'index'])->name('karier');
+
+// Fixed route for /home
+Route::get('/home', function () {
+    return view('home'); // Assumes you have a Blade file `resources/views/home.blade.php`
+})->name('home');
+
+Route::get('/', function () {
+    return response()->file(public_path('index.html'));
+});

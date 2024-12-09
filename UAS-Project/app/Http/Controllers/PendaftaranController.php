@@ -1,7 +1,10 @@
 <?php
+namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class PendaftaranController extends Controller
@@ -78,7 +81,7 @@ class PendaftaranController extends Controller
             
             return $request->file('ijazah_smp')->store('public/ijazah_smp');
         } catch (\Exception $e) {
-            \Log::error('Error storing ijazah: ' . $e->getMessage());
+            Log::error('Error storing ijazah: ' . $e->getMessage());
             return null;
         }
     }

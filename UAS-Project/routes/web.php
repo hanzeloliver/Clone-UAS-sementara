@@ -17,9 +17,14 @@ Route::get('/karier', [KarierController::class, 'index'])->name('karier');
 
 // Fixed route for /home
 Route::get('/home', function () {
-    return view('home'); // Assumes you have a Blade file `resources/views/home.blade.php`
+    return view('home');
 })->name('home');
 
 Route::get('/', function () {
     return response()->file(public_path('index.html'));
 });
+
+Route::get('/', function () {
+    return redirect()->route('home');
+});
+

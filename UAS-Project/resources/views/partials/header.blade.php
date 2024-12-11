@@ -1,4 +1,4 @@
-<header class="bg-primary text-white">
+<header class="bg-primary text-white fixed-top">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center py-3">
             <!-- Navbar (Mobile friendly with hamburger menu) -->
@@ -9,10 +9,10 @@
                 </button>
 
                 <!-- Logo -->
-                <a href="#" class="logo d-flex align-items-center text-white text-decoration-none">
+                <a href="{{ route('home') }}" class="logo d-flex align-items-center text-decoration-none">
                     <img src="{{ asset('Gambar/images(1).jpeg') }}" alt="SMK Informatika Logo" class="me-2" style="width: 50px; height: auto;">
-                    <span>SMK INFORMATIKA DASANA INDAH</span>
-                </a>
+                    <span class="text-white">SMK INFORMATIKA DASANA INDAH</span>
+                </a>                
 
                 <!-- Collapsible Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">

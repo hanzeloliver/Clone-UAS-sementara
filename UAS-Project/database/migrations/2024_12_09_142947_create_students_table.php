@@ -13,15 +13,8 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-        });
-    }
-
-    public function up()
-    {
-        Schema::create('students', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_lengkap')->unique();
+            $table->string('name');
+            $table->string('email')->unique();
             $table->integer('umur');
             $table->date('tanggal_lahir');
             $table->enum('gender', ['Laki-laki', 'Perempuan']);
@@ -39,11 +32,12 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-    
+
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::dropIfExists('students');
     }
 };
-
-

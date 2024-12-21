@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
+        });
+    }
+
+    public function up()
+    {
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
             $table->string('nama_lengkap')->unique();
             $table->integer('umur');
             $table->date('tanggal_lahir');
@@ -27,16 +35,15 @@ return new class extends Migration
             $table->string('asal_sekolah');
             $table->string('negara_asal_sekolah');
             $table->string('kota_asal_sekolah');
-            $table->string('ijazah_smp')->nullable();
+            $table->binary('ijazah_smp');
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
+    
     public function down(): void
     {
         Schema::dropIfExists('students');
     }
 };
+
+

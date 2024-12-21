@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+    @include('partials.header')
     <div style="height: 128px;"></div>
     <!-- Home Slider Section -->
     <section class="home-slider">

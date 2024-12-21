@@ -3,9 +3,10 @@
 <head>
     @include('partials.head')
     <title>Home | SMK Informatika Dasana Indah</title>
+    <!-- Add this line to link the CSS file -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    @include('partials.header')
     <div style="height: 128px;"></div>
     <!-- Home Slider Section -->
     <section class="home-slider">
@@ -17,8 +18,8 @@
 
         <!-- Navigation Arrows -->
         <div class="slider-nav">
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <button class="next" aria-label="Next slide">&#10095;</button>
         </div>
     </section>
 
@@ -77,35 +78,59 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
         const slider = document.querySelector('.slider');
         const slides = document.querySelectorAll('.slide');
         const prevBtn = document.querySelector('.prev');
         const nextBtn = document.querySelector('.next');
         let currentIndex = 0;
+        let intervalId;
 
-        // Function to move to the next slide
         function goToNextSlide() {
             currentIndex = (currentIndex + 1) % slides.length;
             updateSlider();
         }
 
-        // Function to move to the previous slide
         function goToPrevSlide() {
             currentIndex = (currentIndex - 1 + slides.length) % slides.length;
             updateSlider();
         }
 
-        // Update the slider position
         function updateSlider() {
             slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
 
-        // Event listeners for buttons
-        nextBtn.addEventListener('click', goToNextSlide);
-        prevBtn.addEventListener('click', goToPrevSlide);
+        function startAutoSlide() {
+            stopAutoSlide(); // Prevent multiple intervals
+            intervalId = setInterval(goToNextSlide, 5000);
+        }
 
-        // Optional: Auto-slide every 5 seconds
-        setInterval(goToNextSlide, 5000);
+        function stopAutoSlide() {
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+        }
+
+        // Event listeners for buttons
+        nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            goToNextSlide();
+            startAutoSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            goToPrevSlide();
+            startAutoSlide();
+        });
+
+        // Start auto-sliding when page loads
+        startAutoSlide();
+
+        // Optional: Pause sliding when hovering over slider
+        slider.addEventListener('mouseenter', stopAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+    });
     </script>
 </body>
 </html>

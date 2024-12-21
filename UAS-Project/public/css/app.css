@@ -45,41 +45,68 @@
 .home-slider {
     position: relative;
     width: 100%;
-    height: 300px;
     overflow: hidden;
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .slide {
-    min-width: 100%;
-    height: 300px;
-    background-color: #333;
-    color: white;
+    flex: 0 0 100%;
+    height: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 2rem;
+    color: white;
+    background-color: #007bff;
     text-align: center;
+    padding: 20px;
 }
 
-/* Optional: Add navigation dots or arrows for better UX */
 .slider-nav {
     position: absolute;
     top: 50%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    padding: 0 20px;
+    transform: translateY(-50%);
 }
 
-.prev, .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
+.slider-nav button {
+    background: rgba(255, 255, 255, 0.5);
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.slider-nav button:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Other sections styling */
+.home {
+    padding: 100px 0;
+    position: relative;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.home .container {
+    position: relative;
+    z-index: 1;
 }

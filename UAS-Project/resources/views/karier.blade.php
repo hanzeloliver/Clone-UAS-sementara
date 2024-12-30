@@ -5,11 +5,11 @@
     <h2>Karier dan Sistem Magang</h2>
     <p>SMK Informatika Dasana Indah menyediakan peluang karier dan sistem magang di perusahaan-perusahaan terkemuka untuk mempersiapkan siswa menuju dunia kerja.</p>
     
-    <h3>Perusahaan Mitra</h3>
+    <h3>Perusahaan MitraGroup</h3>
     <div class="company-gallery">
-        <img src="images/company1.jpg" alt="PT. Teknologi Cerdas" class="gallery-img">
-        <img src="images/company2.jpg" alt="PT. Inovasi Digital" class="gallery-img">
-        <img src="images/company3.jpg" alt="PT. Data Komputasi" class="gallery-img">
+        <img src="Gambar/company1.jpg" alt="PT. Teknologi Cerdas" class="gallery-img">
+        <img src="Gambar/company2.jpg" alt="PT. Inovasi Digital" class="gallery-img">
+        <img src="Gambar/company3.jpg" alt="PT. Data Komputasi" class="gallery-img">
     </div>
 
     <h3>Testimoni Alumni</h3>

@@ -4,152 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <!-- Include Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Include Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    @include('partials.head')
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
 <body>
     <!-- SIDEBAR START -->
-    <section id="sidebar">
-        <a href="#" class="brand">
-            <i class="bi bi-person-circle"></i>
-            <span class="text">Dashboard</span>
+    <section id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px;">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <i class="bi bi-person-circle me-2 fs-4"></i>
+            <span class="fs-4">Dashboard</span>
         </a>
-        <ul class="side-menu top">
-            <li>
-                <a href="#">
-                    <i class="bi bi-grid-fill"></i>
-                    <span class="text">Dashboard</span>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i class="bi bi-grid-fill me-2"></i>Dashboard
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="bi bi-bar-chart-line"></i>
-                    <span class="text">Analytics</span>
+                <a href="#" class="nav-link link-dark">
+                    <i class="bi bi-bar-chart-line me-2"></i>Analytics
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="bi bi-database"></i>
-                    <span class="text">Database</span>
+                <a href="#" class="nav-link link-dark">
+                    <i class="bi bi-database me-2"></i>Database
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="bi bi-chat-left-text"></i>
-                    <span class="text">Message</span>
+                <a href="#" class="nav-link link-dark">
+                    <i class="bi bi-chat-left-text me-2"></i>Message
                 </a>
             </li>
         </ul>
-        
-        <ul class="side-menu">
+        <hr>
+        <ul class="nav nav-pills flex-column">
             <li>
-                <a href="#">
-                    <i class="bi bi-gear-fill"></i>
-                    <span class="text">Settings</span>
+                <a href="#" class="nav-link link-dark">
+                    <i class="bi bi-gear-fill me-2"></i>Settings
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span class="text">Logout</span>
+                <a href="#" class="nav-link link-dark">
+                    <i class="bi bi-box-arrow-right me-2"></i>Logout
                 </a>
             </li>
         </ul>
     </section>
     <!-- SIDEBAR ENDS -->
 
-
-
-<!-- CONTENT STARTS -->
-    <section id="content">
-        <nav>
-            <i class="bi bi-list" id="menu-toggle"></i>
-            <a href="#" class="nav-link">Categories</a>
-            <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Search...">
-                    <button type="submit" class="search-btn">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
-            </form>
-            <a href="#" class="notification">
-                <i class="bi bi-bell-fill"></i>
-                <span class="num">8</span>
-            </a>
-            <a href="#">
-                <img src="img/people.png" alt="User Profile">
-            </a>
-        </nav>
-        <!-- CONTENT ENDS -->
-
-        <!-- MAIN -->
-        <main>
-            <div class="head-tittle">
-                <div class="left">
-                    <h1>Dashboard</h1>
-                    <ul class="breadcrumb">
-                        <li>
-                            <a href="#">Dashboard</a>
+    <!-- CONTENT STARTS -->
+    <section id="content" class="d-flex flex-column flex-grow-1">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categories</a>
                         </li>
-                        <li><i class="bi bi-chevron-right"></i></li>
-                        <li>
-                            <a class="active" href="#">Home</a>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">
+                                <i class="bi bi-bell-fill"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    8
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="img/people.png" alt="User Profile" class="rounded-circle" width="30" height="30">
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <a href="#" class="btn-download">
-                    <i class="bi bi-cloud-download-fill"></i>
-                    <span class="text">Download PDF</span>
+            </div>
+        </nav>
+
+        <!-- MAIN -->
+        <main class="container mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h3">Dashboard</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                        </ol>
+                    </nav>
+                </div>
+                <a href="#" class="btn btn-primary">
+                    <i class="bi bi-cloud-download-fill me-2"></i>Download PDF
                 </a>
             </div>
         </main>
     </section>
     <script>
-        const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+        // Activate Sidebar Items
+        const allSideMenu = document.querySelectorAll('#sidebar .nav-link');
 
         allSideMenu.forEach(item => {
-            const li = item.parentElement;
+            const li = item.closest('li');
 
             item.addEventListener('click', function() {
                 allSideMenu.forEach(i => {
-                    i.parentElement.classList.remove('active');
+                    i.classList.remove('active');
                 });
-                li.classList.add('active');
+                item.classList.add('active');
             });
         });
 
-        // TOGGLE SIDEBAR
-        const menuBar = document.querySelector('#content nav .bx.bx-menu');
-        const sideBar = document.getElementById('sidebar');
+        // Responsive Sidebar Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
 
-        menuBar.addEventListener('click', function() {
-            sideBar.classList.toggle('hide');
-        });
-
-        // HANDLE WINDOW RESIZE AND SEARCH BEHAVIOR
-        const searchButtonIcon = document.querySelector('#content nav .bx.bx-search');
-        const searchForm = document.querySelector('#content nav .search-form');
-
-        if (window.innerWidth < 768) {
-            sideBar.classList.add('hide');
-        } else if (window.innerWidth > 576) {
-            if (searchButtonIcon && searchForm) {
-                searchButtonIcon.classList.replace('bx-x', 'bx-search');
-                searchForm.classList.remove('show');
-            }
-        }
-
-        window.addEventListener('resize', function() {
-            if (this.innerWidth > 576) {
-                if (searchButtonIcon && searchForm) {
-                    searchButtonIcon.classList.replace('bx-x', 'bx-search');
-                    searchForm.classList.remove('show');
-                }
-            }
+        menuToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('d-none');
         });
     </script>
 </body>

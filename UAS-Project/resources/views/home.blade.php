@@ -8,7 +8,6 @@
 </head>
 <body>
     @include('partials.header')
-    <div style="height: 128px;"></div>
     <!-- Home Slider Section -->
     <section class="home-slider">
         <div class="slider">

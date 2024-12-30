@@ -1,4 +1,4 @@
-<header class="bg-primary text-white fixed-top">
+<header class="bg-white text-black fixed-top">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center py-3">
             <!-- Navbar (Mobile friendly with hamburger menu) -->
@@ -11,32 +11,32 @@
                 <!-- Logo -->
                 <a href="{{ route('home') }}" class="logo d-flex align-items-center text-decoration-none">
                     <img src="{{ asset('Gambar/images(1).jpeg') }}" alt="SMK Informatika Logo" class="me-2" style="width: 50px; height: auto;">
-                    <span class="text-white">SMK INFORMATIKA DASANA INDAH</span>
+                    <span class="text-black">SMK INFORMATIKA DASANA INDAH</span>
                 </a>                
 
                 <!-- Collapsible Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto flex-wrap">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('home') }}">Home</a>
+                            <a class="nav-link text-primary" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('tentang-smk') }}">Tentang SMK</a>
+                            <a class="nav-link text-primary" href="{{ route('tentang-smk') }}">Tentang SMK</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('pembelajaran') }}">Pembelajaran</a>
+                            <a class="nav-link text-primary" href="{{ route('pembelajaran') }}">Pembelajaran</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('sekolah-kami') }}">Sekolah Kami</a>
+                            <a class="nav-link text-primary" href="{{ route('sekolah-kami') }}">Sekolah Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('pendaftaran') }}">Pendaftaran</a>
+                            <a class="nav-link text-primary" href="{{ route('pendaftaran') }}">Pendaftaran</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('kehidupan-siswa') }}">Kehidupan Siswa</a>
+                            <a class="nav-link text-primary" href="{{ route('kehidupan-siswa') }}">Kehidupan Siswa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('karier') }}">Karier</a>
+                            <a class="nav-link text-primary" href="{{ route('karier') }}">Karier</a>
                         </li>
                     </ul>
                 </div>
@@ -50,3 +50,4 @@
         </div>
     </div>
 </header>
+<div style="height: 128px;"></div>

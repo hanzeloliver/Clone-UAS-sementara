@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 <header class="bg-white text-black fixed-top">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center py-3">
@@ -38,14 +40,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('karier') }}">Karier</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="#">Admin Login</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
-
             <!-- WhatsApp Icon on the far-right -->
             <a href="https://wa.me/6281234567890" class="btn btn-success d-flex align-items-center ms-3" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp fa-lg me-2"></i>
-                WhatsApp
+                <i class="fab fa-whatsapp fa-lg me-2">WhatsApp</i>
             </a>
         </div>
     </div>

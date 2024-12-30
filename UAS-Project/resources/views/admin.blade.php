@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <!-- Menyertakan boxicons dari CDN -->
-    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <!-- Include Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
 <body>
     <!-- SIDEBAR START -->
     <section id="sidebar">
-        <a href="" class="brand">
-            <i class="bx bxs-user-circle"></i>
+        <a href="#" class="brand">
+            <i class="bi bi-person-circle"></i>
             <span class="text">Dashboard</span>
         </a>
         <ul class="side-menu top">
             <li>
-                <a href="">
-                    <i class="bx bxs-dashboard"></i>
+                <a href="#">
+                    <i class="bi bi-grid-fill"></i>
                     <span class="text">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="">
-                    <i class="bx bxs-bar-chart-alt-2"></i>
+                <a href="#">
+                    <i class="bi bi-bar-chart-line"></i>
                     <span class="text">Analytics</span>
                 </a>
             </li>
             <li>
-                <a href="">
-                    <i class="bx bxs-data"></i>
+                <a href="#">
+                    <i class="bi bi-database"></i>
                     <span class="text">Database</span>
                 </a>
             </li>
             <li>
-                <a href="">
-                    <i class="bx bxs-message"></i>
+                <a href="#">
+                    <i class="bi bi-chat-left-text"></i>
                     <span class="text">Message</span>
                 </a>
             </li>
@@ -44,14 +46,14 @@
         
         <ul class="side-menu">
             <li>
-                <a href="">
-                    <i class="bx bxs-cog"></i>
+                <a href="#">
+                    <i class="bi bi-gear-fill"></i>
                     <span class="text">Settings</span>
                 </a>
             </li>
             <li>
-                <a href="">
-                    <i class="bx bxs-log-out"></i>
+                <a href="#">
+                    <i class="bi bi-box-arrow-right"></i>
                     <span class="text">Logout</span>
                 </a>
             </li>
@@ -62,48 +64,50 @@
 
 
 <!-- CONTENT STARTS -->
- <section id="content">
-    <nav>
-        <i class="bx bx-menu"></i>
-        <a href="#" class="nav-link">Categories</a>
-        <form action="#">
-            <div class="form-input">
-                <input type="search" placeholder="Search...">
-                <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
-            </div>
-        </form>
-        <a href="#" class="notification">
-            <i class="bx bxs-bell"></i>
-            <span class="num">8</span>
-        </a>
-        <a href="#">
-            <img src="img/people.png">
-        </a>
-    </nav>
-    <!-- CONTENT ENDS -->
-
-    <!-- MAIN -->
-     <main>
-        <div class="head-tittle">
-            <div class="left">
-                <h1>Dashboard</h1>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li><i class="bx bx-chevron-right"></i></li>
-                    <li>
-                        <a class="active" href="#">Home</a>
-                    </li>
-                </ul>
-            </div>
-            <a href="#" class="btn-download">
-                <i class="bx bxs-cloud-download"></i>
-                <span class="text">Download PDF</span>
+    <section id="content">
+        <nav>
+            <i class="bi bi-list" id="menu-toggle"></i>
+            <a href="#" class="nav-link">Categories</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+            <a href="#" class="notification">
+                <i class="bi bi-bell-fill"></i>
+                <span class="num">8</span>
             </a>
-        </div>
-     </main>
- </section>
+            <a href="#">
+                <img src="img/people.png" alt="User Profile">
+            </a>
+        </nav>
+        <!-- CONTENT ENDS -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-tittle">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i></li>
+                        <li>
+                            <a class="active" href="#">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-download">
+                    <i class="bi bi-cloud-download-fill"></i>
+                    <span class="text">Download PDF</span>
+                </a>
+            </div>
+        </main>
+    </section>
     <script>
         const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 

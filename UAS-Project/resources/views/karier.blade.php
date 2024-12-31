@@ -49,9 +49,9 @@
         
         <h3 class="mt-5">Perusahaan Mitra Group</h3>
         <div class="company-gallery">
-            <img src="Gambar/company1.jpg" alt="PT. Teknologi Cerdas" class="gallery-img img-thumbnail">
-            <img src="Gambar/company4.jpg" alt="PT. Inovasi Digital" class="gallery-img img-thumbnail">
-            <img src="Gambar/company5.jpg" alt="PT. Data Komputasi" class="gallery-img img-thumbnail">
+            <img src="Gambar/company1.png" alt="PT. Teknologi Cerdas" class="gallery-img img-thumbnail">
+            <img src="Gambar/company4.png" alt="PT. Inovasi Digital" class="gallery-img img-thumbnail">
+            <img src="Gambar/company5.png" alt="PT. Data Komputasi" class="gallery-img img-thumbnail">
         </div>
 
         <h3 class="mt-5">Testimoni Alumni</h3>

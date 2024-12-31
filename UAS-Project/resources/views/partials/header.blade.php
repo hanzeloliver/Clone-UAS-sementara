@@ -2,19 +2,22 @@
 
 <header class="bg-white text-black fixed-top">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center py-3">
+        <div class="d-flex align-items-center py-3">
             <!-- Navbar (Mobile friendly with hamburger menu) -->
-            <nav class="navbar navbar-expand-lg navbar-light w-100 d-flex align-items-center">
-                <!-- Menu button (for mobile) on the left -->
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <!-- Logo and Menu button container -->
+                <div class="d-flex w-85 align-items-center">
+                    <!-- Menu button (for mobile) on the left -->
+                    <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <!-- Logo -->
-                <a href="{{ route('home') }}" class="logo d-flex align-items-center text-decoration-none">
-                    <img src="{{ asset('Gambar/images(1).jpeg') }}" alt="SMK Informatika Logo" class="me-2" style="width: 50px; height: auto;">
-                    <span class="text-black">SMK INFORMATIKA DASANA INDAH</span>
-                </a>                
+                    <!-- Logo -->
+                    <a href="{{ route('home') }}" class="logo d-flex align-items-center text-decoration-none">
+                        <img src="{{ asset('Gambar/images(1).jpeg') }}" alt="SMK Informatika Logo" class="me-2" style="width: 50px; height: auto;">
+                        <span class="text-black">SMK INFORMATIKA DASANA INDAH</span>
+                    </a>
+                </div>
 
                 <!-- Collapsible Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -53,5 +56,7 @@
         </div>
     </div>
 </header>
+
+<!-- Space to avoid content overlap with the fixed header -->
 <div style="height: 95px;"></div>
 {{-- <div style="height: 128px;"></div> --}}

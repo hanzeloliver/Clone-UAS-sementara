@@ -55,11 +55,11 @@
         </div>
 
         <h3 class="mt-5">Testimoni Alumni</h3>
-        <blockquote class="blockquote text-center">
-            <p class="mb-0">"Berkat SMK Informatika Dasana Indah, saya bisa bekerja di salah satu perusahaan IT ternama!"</p>
-            <footer class="blockquote-footer">John Doe, Alumni 2020</footer>
-        </blockquote>
-    </section>
+<div id="testimoni-container" class="text-center">
+    <!-- Placeholder jika tidak ada alumni -->
+    <p id="no-alumni" class="text-muted">Saat ini belum ada testimoni dari alumni.</p>
+</div>
+</section>
 
     <script>
         document.querySelectorAll('.gallery-img').forEach(img => {
@@ -74,6 +74,32 @@
                 });
             });
         });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+    const alumniTestimonials = []; // Array kosong untuk testimoni
+    
+    const testimoniContainer = document.getElementById('testimoni-container');
+    const noAlumni = document.getElementById('no-alumni');
+
+    // Jika tidak ada testimoni
+    if (alumniTestimonials.length === 0) {
+        noAlumni.style.display = 'block';
+    } else {
+        noAlumni.style.display = 'none';
+
+        // Tambahkan testimoni secara dinamis
+        alumniTestimonials.forEach(testimoni => {
+            const blockquote = document.createElement('blockquote');
+            blockquote.classList.add('blockquote', 'text-center');
+            blockquote.innerHTML = `
+                <p class="mb-0">"${testimoni.message}"</p>
+                <footer class="blockquote-footer">${testimoni.name}, ${testimoni.year}</footer>
+            `;
+            testimoniContainer.appendChild(blockquote);
+        });
+    }
+});
+
     </script>
 </body>
 </html>

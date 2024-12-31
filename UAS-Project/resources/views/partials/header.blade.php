@@ -6,7 +6,7 @@
             <!-- Navbar (Mobile friendly with hamburger menu) -->
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <!-- Logo and Menu button container -->
-                <div class="d-flex w-85 align-items-center">
+                <div class="d-flex w-90 align-items-center">
                     <!-- Menu button (for mobile) on the left -->
                     <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -58,5 +58,5 @@
 </header>
 
 <!-- Space to avoid content overlap with the fixed header -->
-<div style="height: 95px;"></div>
+<div style="height: 100px;"></div>
 {{-- <div style="height: 128px;"></div> --}}

@@ -88,6 +88,8 @@
         </div>
     </section>
 
+    @include('partials.footer')
+
     <script>
         const images = document.querySelectorAll('.image-slider img');
         let currentIndex = 0;

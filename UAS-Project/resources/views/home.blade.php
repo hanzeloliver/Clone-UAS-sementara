@@ -45,7 +45,7 @@
                     <h3>THIS SCHOOL BEST ON THE APPLICATION</h3>
                     <p>SMK Informatika Dasana Indah adalah salah satu sekolah menengah kejuruan unggulan yang berlokasi di kawasan Dasana Indah, Tangerang. Sekolah ini memiliki fokus utama pada pendidikan teknologi informasi dan komunikasi, menyediakan berbagai program keahlian seperti Rekayasa Perangkat Lunak (RPL), Teknik Komputer dan Jaringan (TKJ), serta Desain Multimedia.</p>
                     <p>Dengan dukungan tenaga pengajar profesional dan fasilitas modern, SMK Informatika Dasana Indah berkomitmen untuk menghasilkan lulusan yang siap bersaing di dunia industri dan memiliki kemampuan untuk menghadapi tantangan era digital. Selain itu, sekolah ini juga aktif dalam berbagai kegiatan ekstrakurikuler, seperti coding club, robotik, dan olahraga, guna mengembangkan bakat serta potensi siswa secara menyeluruh.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    {{-- <a href="#" class="btn btn-primary">Read More</a> --}}
                 </div>
             </div>
         </div>

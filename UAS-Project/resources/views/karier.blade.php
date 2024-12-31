@@ -55,11 +55,13 @@
         </div>
 
         <h3 class="mt-5">Testimoni Alumni</h3>
-<div id="testimoni-container" class="text-center">
-    <!-- Placeholder jika tidak ada alumni -->
-    <p id="no-alumni" class="text-muted">Saat ini belum ada testimoni dari alumni.</p>
-</div>
-</section>
+        <div id="testimoni-container" class="text-center">
+            <!-- Placeholder jika tidak ada alumni -->
+            <p id="no-alumni" class="text-muted">Saat ini belum ada testimoni dari alumni.</p>
+        </div>
+    </section>
+    
+    @include('partials.footer')
 
     <script>
         document.querySelectorAll('.gallery-img').forEach(img => {

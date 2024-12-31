@@ -28,9 +28,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('pembelajaran') }}">Pembelajaran</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('sekolah-kami') }}">Sekolah Kami</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('pendaftaran') }}">Pendaftaran</a>
                         </li>
@@ -53,4 +53,5 @@
         </div>
     </div>
 </header>
-<div style="height: 128px;"></div>
+<div style="height: 95px;"></div>
+{{-- <div style="height: 128px;"></div> --}}

@@ -101,6 +101,8 @@
         <p>Siswa kami didukung oleh guru-guru profesional yang selalu bersemangat dalam mengajar dan membimbing siswa mencapai potensinya.</p>
     </section>
 
+    @include('partials.footer')
+
     <script>
         document.querySelectorAll('.gallery-img').forEach(img => {
             img.addEventListener('click', () => {

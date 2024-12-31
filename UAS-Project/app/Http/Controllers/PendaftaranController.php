@@ -11,6 +11,11 @@ class PendaftaranController extends Controller
 {
     protected $student;
 
+    public function index()
+    {
+        return view('pendaftaran');
+    }
+
     public function __construct(Student $student)
     {
         $this->student = $student;

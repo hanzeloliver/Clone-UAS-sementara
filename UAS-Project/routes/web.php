@@ -12,6 +12,7 @@ Route::get('/tentang-smk', [TentangSMKController::class, 'index'])->name('tentan
 Route::get('/pembelajaran', [PembelajaranController::class, 'index'])->name('pembelajaran');
 Route::get('/sekolah-kami', [SekolahKamiController::class, 'index'])->name('sekolah-kami');
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran');
+Route::post('/pendaftaran', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
 Route::get('/kehidupan-siswa', [KehidupanSiswaController::class, 'index'])->name('kehidupan-siswa');
 Route::get('/karier', [KarierController::class, 'index'])->name('karier');
 
@@ -19,10 +20,6 @@ Route::get('/karier', [KarierController::class, 'index'])->name('karier');
 Route::get('/home', function () {
     return view('home');
 })->name('home');
-
-Route::get('/', function () {
-    return response()->file(public_path('index.html'));
-});
 
 Route::get('/', function () {
     return redirect()->route('home');

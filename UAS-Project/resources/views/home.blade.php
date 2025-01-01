@@ -26,30 +26,30 @@
     <!-- Home Section Starts -->
     <section class="home bg-primary text-white text-center py-5" id="home" style="background-image: url('{{ asset('Gambar/images.jpg') }}'); background-size: cover; background-position: center;">
         <div class="container">
-            <h3 class="display-4">The Best Courses You Will Find Here</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita earum odit, recusandae modi laudantium deleniti voluptates excepturi accusantium similique dignissimos iusto?</p>
+            <h3 class="display-4">Motivasi</h3>
+            <p class="lead">"Setiap langkah kecil dalam belajar adalah awal dari inovasi besar di masa depan."</p>
         </div>
     </section>
     <!-- Home Section Ends -->
 
     <!-- About Section Starts -->
     <section class="about py-5" id="about">
-        <div class="container">
-            <h1 class="heading text-center mb-4">Identitas Kami</h1>
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <img src="/Gambar/463290798_8471650582926041_6715114587561835296_n.jpg" alt="" class="img-fluid mb-3">
-                    <img src="/Gambar/about-1.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="col-md-6">
-                    <h3>THIS SCHOOL BEST ON THE APPLICATION</h3>
-                    <p>SMK Informatika Dasana Indah adalah salah satu sekolah menengah kejuruan unggulan yang berlokasi di kawasan Dasana Indah, Tangerang. Sekolah ini memiliki fokus utama pada pendidikan teknologi informasi dan komunikasi, menyediakan berbagai program keahlian seperti Rekayasa Perangkat Lunak (RPL), Teknik Komputer dan Jaringan (TKJ), serta Desain Multimedia.</p>
-                    <p>Dengan dukungan tenaga pengajar profesional dan fasilitas modern, SMK Informatika Dasana Indah berkomitmen untuk menghasilkan lulusan yang siap bersaing di dunia industri dan memiliki kemampuan untuk menghadapi tantangan era digital. Selain itu, sekolah ini juga aktif dalam berbagai kegiatan ekstrakurikuler, seperti coding club, robotik, dan olahraga, guna mengembangkan bakat serta potensi siswa secara menyeluruh.</p>
-                    {{-- <a href="#" class="btn btn-primary">Read More</a> --}}
-                </div>
+    <div class="container">
+        <h1 class="heading text-center mb-4">Identitas Kami</h1>
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <img src="/Gambar/463290798_8471650582926041_6715114587561835296_n.jpg" alt="" class="img-fluid mb-3">
+                <img src="/Gambar/about-1.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3>THIS SCHOOL BEST ON THE APPLICATION</h3>
+                <p>SMK Informatika Dasana Indah adalah salah satu sekolah menengah kejuruan unggulan yang berlokasi di kawasan Dasana Indah, Tangerang. Sekolah ini memiliki fokus utama pada pendidikan teknologi informasi dan komunikasi, menyediakan berbagai program keahlian seperti Rekayasa Perangkat Lunak (RPL), Teknik Komputer dan Jaringan (TKJ), serta Desain Multimedia.</p>
+                <p id="more-text">Dengan dukungan tenaga pengajar profesional dan fasilitas modern, SMK Informatika Dasana Indah berkomitmen untuk menghasilkan lulusan yang siap bersaing di dunia industri dan memiliki kemampuan untuk menghadapi tantangan era digital. Selain itu, sekolah ini juga aktif dalam berbagai kegiatan ekstrakurikuler, seperti coding club, robotik, dan olahraga, guna mengembangkan bakat serta potensi siswa secara menyeluruh.</p>
+                <button id="read-more-btn" class="btn btn-primary">Read More</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- About Section Ends -->
 
     <!-- Subjects Section Starts -->
@@ -128,6 +128,23 @@
         slider.addEventListener('mouseenter', stopAutoSlide);
         slider.addEventListener('mouseleave', startAutoSlide);
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const readMoreBtn = document.getElementById('read-more-btn');
+        const moreText = document.getElementById('more-text');
+
+        // Logika tombol Read More
+        readMoreBtn.addEventListener('click', () => {
+            if (moreText.style.maxHeight) {
+                moreText.style.maxHeight = null; // Tutup teks
+                readMoreBtn.textContent = 'Read More';
+            } else {
+                moreText.style.maxHeight = 'none'; // Tetap buka, meskipun tidak ada tambahan teks
+                readMoreBtn.textContent = 'Read More';
+            }
+        });
+    });
+
     </script>
 </body>
 </html>

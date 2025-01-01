@@ -71,8 +71,8 @@
     @include('partials.header')
     <section id="tentang-smk">
         <h2>Visi dan Misi</h2>
-        <p>Visi: Membentuk generasi ahli IT yang berkompetensi tinggi.</p>
-        <p>Misi: Memberikan pendidikan berbasis teknologi terbaik.</p>
+        <p>Visi: Menjadi lembaga pendidikan kejuruan unggulan yang mencetak generasi profesional di bidang teknologi informasi dan komunikasi, berkarakter, dan siap bersaing di era global.</p>
+        <p>Misi: Menyelenggarakan pendidikan berbasis teknologi informasi yang inovatif untuk mencetak siswa berkarakter unggul, berkompeten, dan siap menghadapi tantangan dunia kerja.</p>
 
         <h2>Fasilitas</h2>
         <div class="image-gallery">

@@ -84,7 +84,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img/people.png" alt="User Profile" class="rounded-circle" width="30" height="30">
+                                <img src="img/people.jpg" alt="User Profile" class="rounded-circle" width="30" height="30">
                             </a>
                         </li>
                     </ul>

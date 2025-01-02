@@ -4,8 +4,19 @@
     @include('partials.head')
     <title>Kehidupan Siswa</title>
     <style>
-        h2, h3 {
+        #kehidupan-siswa {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+        #kehidupan-siswa h2 {
             text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        #kehidupan-siswa p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
     </style>
 </head>
@@ -13,7 +24,7 @@
 <body>
     @include('partials.header')
 
-    <section id="kehidupan-siswa" class="container my-5">
+    <section id="kehidupan-siswa">
         <div class="text-center mb-4">
             <h2>Kehidupan Siswa</h2>
             <p>Di SMK Informatika Dasana Indah, siswa menikmati lingkungan belajar yang mendukung kreativitas, inovasi, dan kerja tim. Berikut adalah momen-momen berharga siswa kami:</p>

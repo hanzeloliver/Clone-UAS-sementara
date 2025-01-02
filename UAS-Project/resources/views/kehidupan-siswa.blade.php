@@ -92,9 +92,9 @@
         <p>Di SMK Informatika Dasana Indah, siswa menikmati lingkungan belajar yang mendukung kreativitas, inovasi, dan kerja tim. Berikut adalah momen-momen berharga siswa kami:</p>
         
         <div class="photo-gallery">
-            <img src="images/siswa1.jpg" alt="Kegiatan Kelas" class="gallery-img">
-            <img src="images/siswa2.jpg" alt="Seminar" class="gallery-img">
-            <img src="images/siswa3.jpg" alt="Festival Sekolah" class="gallery-img">
+            <img src="Gambar/siswa1.jpg" alt="Kegiatan Kelas" class="gallery-img">
+            <img src="Gambar/siswa2.jpeg" alt="Pembelajaran" class="gallery-img">
+            <img src="Gambar/acarasekolah.jpg" alt="Acara" class="gallery-img">
         </div>
 
         <h3>Guru dan Siswa</h3>

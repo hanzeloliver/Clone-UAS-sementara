@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TentangSMKController;
 use App\Http\Controllers\PembelajaranController;
 use App\Http\Controllers\SekolahKamiController;
@@ -8,6 +10,8 @@ use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\KehidupanSiswaController;
 use App\Http\Controllers\KarierController;
 
+Route::get('/', [UserController::class, 'home'])->name('user.home');
+Route::get('/about', [UserController::class, 'about'])->name('user.about');
 Route::get('/tentang-smk', [TentangSMKController::class, 'index'])->name('tentang-smk');
 Route::get('/pembelajaran', [PembelajaranController::class, 'index'])->name('pembelajaran');
 Route::get('/sekolah-kami', [SekolahKamiController::class, 'index'])->name('sekolah-kami');
@@ -25,3 +29,7 @@ Route::get('/', function () {
     return redirect()->route('home');
 });
 
+Route::middleware(['admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/siswa', [AdminController::class, 'siswa'])->name('admin.siswa');
+});

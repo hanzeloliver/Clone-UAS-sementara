@@ -94,20 +94,11 @@
         <h2>Akademik & Sistem Sekolah</h2>
         <p>SMK Informatika Dasana Indah memiliki program pembelajaran yang berfokus pada teknologi informasi dan komunikasi, serta pembentukan karakter siswa yang kompeten dan profesional.</p>
         
-        <h3>Mata Pelajaran Utama</h3>
-        <ul>
-            <li>Pemrograman Dasar</li>
-            <li>Pengembangan Web</li>
-            <li>Jaringan Komputer</li>
-            <li>Desain Grafis</li>
-            <li>Manajemen Basis Data</li>
-        </ul>
-
-        <h3>Praktikum</h3>
+        <h3>Pengajaran</h3>
         <div class="praktikum-gallery">
-            <img src="{{ asset('images/praktikum1.jpg') }}" alt="Lab Pemrograman" class="gallery-img">
-            <img src="{{ asset('images/praktikum2.jpg') }}" alt="Lab Jaringan" class="gallery-img">
-            <img src="{{ asset('images/praktikum3.jpg') }}" alt="Workshop Desain" class="gallery-img">
+            <img src="{{ asset('Gambar/siswa3.jpg') }}" alt="Pembelajaran" class="gallery-img">
+            <img src="{{ asset('Gambar/praktikum2.jpg') }}" alt="Robotik" class="gallery-img">
+            <img src="{{ asset('Gambar/praktikum3.jpg') }}" alt="Robotik" class="gallery-img">
         </div>
     </section>
 

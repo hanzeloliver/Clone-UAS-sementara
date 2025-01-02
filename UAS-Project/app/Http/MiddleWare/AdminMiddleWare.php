@@ -13,7 +13,7 @@ class AdminMiddleware
             return $next($request);
         }
 
-        return redirect('/'); // Redirect ke halaman user jika bukan admin
+        return redirect('/home');
     }
 }
 

@@ -49,10 +49,6 @@
                     </ul>
                 </div>
             </nav>
-            <!-- WhatsApp Icon on the far-right -->
-            <a href="https://wa.me/6281234567890" class="btn btn-success d-flex align-items-center ms-3" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp fa-lg me-2">WhatsApp</i>
-            </a>
         </div>
     </div>
 </header>
@@ -60,3 +56,9 @@
 <!-- Space to avoid content overlap with the fixed header -->
 <div style="height: 100px;"></div>
 {{-- <div style="height: 128px;"></div> --}}
+
+<!-- WhatsApp Icon on the far-right (Fixed position) -->
+<a href="https://wa.me/6281234567890" class="btn btn-success d-flex align-items-center ms-3 position-fixed bottom-0 end-0 mb-3 me-3" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp fa-lg me-2">WhatsApp</i>
+</a>
+

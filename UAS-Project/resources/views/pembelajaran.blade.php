@@ -84,7 +84,6 @@
             font-size: 2rem;
             color: white;
             cursor: pointer;
-            font-family: Arial, sans-serif;
         }
     </style>
 </head>

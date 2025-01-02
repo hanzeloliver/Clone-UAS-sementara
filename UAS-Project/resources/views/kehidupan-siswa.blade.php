@@ -4,11 +4,6 @@
     @include('partials.head')
     <title>Kehidupan Siswa</title>
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
         h2, h3 {
             text-align: center;
         }

@@ -32,16 +32,19 @@
             height: auto;
             position: relative;
         }
+        
         .image-slider img {
-            display: none;
-            width: 100%;
-            border-radius: 8px;
-            transition: opacity 0.5s ease;
-        }
-        .image-slider img.visible {
             display: block;
-            opacity: 1;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
+
+        .image-slider img.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         .slider-controls {
             margin-top: 1rem;
         }
@@ -73,7 +76,7 @@
         <h2>Visi dan Misi</h2>
         <p>Visi: Menjadi lembaga pendidikan kejuruan unggulan yang mencetak generasi profesional di bidang teknologi informasi dan komunikasi, berkarakter, dan siap bersaing di era global.</p>
         <p>Misi: Menyelenggarakan pendidikan berbasis teknologi informasi yang inovatif untuk mencetak siswa berkarakter unggul, berkompeten, dan siap menghadapi tantangan dunia kerja.</p>
-
+    
         <h2>Fasilitas</h2>
         <div class="image-gallery">
             <div class="image-slider">
@@ -82,33 +85,71 @@
                 <img src="{{ asset('images/image3.jpg') }}" alt="Lapangan Olahraga">
             </div>
             <div class="slider-controls">
-                <button id="prev">Prev</button>
-                <button id="next">Next</button>
+                <button id="prev" aria-label="Previous Slide">Prev</button>
+                <button id="next" aria-label="Next Slide">Next</button>
             </div>
         </div>
     </section>
-
-    @include('partials.footer')
-
+    
     <script>
-        const images = document.querySelectorAll('.image-slider img');
-        let currentIndex = 0;
-
-        function updateSlider(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('visible', i === index);
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.image-slider img');
+            const nextButton = document.getElementById('next');
+            const prevButton = document.getElementById('prev');
+            let currentIndex = 0;
+            let intervalId;
+    
+            // Update slider visibility
+            function updateSlider(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('visible', i === index);
+                });
+            }
+    
+            // Move to the next image
+            function goToNextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateSlider(currentIndex);
+            }
+    
+            // Move to the previous image
+            function goToPrevSlide() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateSlider(currentIndex);
+            }
+    
+            // Start auto-sliding
+            function startAutoSlide() {
+                intervalId = setInterval(goToNextSlide, 5000);
+            }
+    
+            // Stop auto-sliding
+            function stopAutoSlide() {
+                clearInterval(intervalId);
+            }
+    
+            // Event listeners for manual navigation
+            nextButton.addEventListener('click', () => {
+                stopAutoSlide();
+                goToNextSlide();
+                startAutoSlide();
             });
-        }
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateSlider(currentIndex);
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateSlider(currentIndex);
+    
+            prevButton.addEventListener('click', () => {
+                stopAutoSlide();
+                goToPrevSlide();
+                startAutoSlide();
+            });
+    
+            // Pause auto-slide on hover
+            const slider = document.querySelector('.image-slider');
+            slider.addEventListener('mouseenter', stopAutoSlide);
+            slider.addEventListener('mouseleave', startAutoSlide);
+    
+            // Initialize
+            startAutoSlide();
         });
     </script>
+    
 </body>
 </html>

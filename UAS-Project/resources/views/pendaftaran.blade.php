@@ -12,7 +12,7 @@
 
         /* Form Container */
         #pendaftaran {
-            background-color: #f9f9f9;
+            background-color: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
         }

@@ -3,8 +3,6 @@
 <head>
     @include('partials.head')
     <title>Home | SMK Informatika Dasana Indah</title>
-    <!-- Add this line to link the CSS file -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     @include('partials.header')

@@ -4,7 +4,7 @@
     @include('partials.head')
     <title>Karier dan Sistem Magang</title>
     <style>
-        .gallery-img {
+        .gallery-specific {
             max-width: 100%;
             height: auto;
             cursor: pointer;
@@ -14,30 +14,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-        }
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1050;
-        }
-        .modal-img {
-            max-width: 90%;
-            max-height: 80%;
-        }
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 2rem;
-            color: white;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -49,9 +25,9 @@
         
         <h3 class="mt-5">Perusahaan Mitra Group</h3>
         <div class="company-gallery">
-            <img src="Gambar/company1.png" alt="PT. Teknologi Cerdas" class="gallery-img img-thumbnail">
-            <img src="Gambar/company4.png" alt="PT. Inovasi Digital" class="gallery-img img-thumbnail">
-            <img src="Gambar/company5.png" alt="PT. Data Komputasi" class="gallery-img img-thumbnail">
+            <img src="Gambar/company1.png" alt="PT. Teknologi Cerdas" class="gallery-specific img-thumbnail">
+            <img src="Gambar/company4.png" alt="PT. Inovasi Digital" class="gallery-specific img-thumbnail">
+            <img src="Gambar/company5.png" alt="PT. Data Komputasi" class="gallery-specific img-thumbnail">
         </div>
 
         <h3 class="mt-5">Testimoni Alumni</h3>

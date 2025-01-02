@@ -3,6 +3,7 @@
 <head>
     @include('partials.head')
     <title>Pembelajaran</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
         #pembelajaran {
             padding: 2rem;
@@ -46,6 +47,9 @@
             cursor: pointer;
             transition: transform 0.3s ease;
         }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
         @media (min-width: 768px) {
             .gallery-img {
                 width: calc(33.333% - 20px);
@@ -55,6 +59,31 @@
             .gallery-img {
                 width: calc(50% - 20px);
             }
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1050;
+        }
+        .modal-img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>

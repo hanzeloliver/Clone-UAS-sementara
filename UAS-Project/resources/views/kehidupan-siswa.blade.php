@@ -21,13 +21,13 @@
 
         <!-- Photo Gallery -->
         <div class="row g-3">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 mb-3">
                 <img src="Gambar/siswa1.jpg" alt="Kegiatan Kelas" class="gallery-img img-fluid w-100">
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 mb-3">
                 <img src="Gambar/siswa2.jpeg" alt="Pembelajaran" class="gallery-img img-fluid w-100">
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 mb-3">
                 <img src="Gambar/acarasekolah.jpg" alt="Acara" class="gallery-img img-fluid w-100">
             </div>
         </div>

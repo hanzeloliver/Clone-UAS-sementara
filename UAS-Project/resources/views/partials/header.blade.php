@@ -44,7 +44,7 @@
                             <a class="nav-link text-primary" href="{{ route('karier') }}">Karier</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="#">Login</a>
+                            <a class="nav-link text-primary" href="{{ route('login-register')}}">Login</a>
                         </li>
                     </ul>
                 </div>

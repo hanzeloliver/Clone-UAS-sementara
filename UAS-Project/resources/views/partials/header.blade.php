@@ -31,9 +31,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('pembelajaran') }}">Pembelajaran</a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link text-primary" href="{{ route('sekolah-kami') }}">Sekolah Kami</a>
-                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('pendaftaran') }}">Pendaftaran</a>
                         </li>
@@ -43,9 +40,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-primary" href="{{ route('karier') }}">Karier</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-primary" href="{{ route('login') }}">Login</a>
-                        </li>                        
+
+                        <!-- Conditional Login/Logout Link -->
+                        @if (Auth::check())
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="#">Login</a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </nav>
@@ -55,10 +63,8 @@
 
 <!-- Space to avoid content overlap with the fixed header -->
 <div style="height: 100px;"></div>
-{{-- <div style="height: 128px;"></div> --}}
 
 <!-- WhatsApp Icon on the far-right (Fixed position) -->
 <a href="https://wa.me/6281234567890" class="btn btn-success d-flex align-items-center ms-3 position-fixed bottom-0 end-0 mb-3 me-3" target="_blank" rel="noopener">
     <i class="fab fa-whatsapp fa-lg me-2">WhatsApp</i>
 </a>
-

@@ -27,15 +27,15 @@ Route::get('/login', [RegisterLoginController::class, 'showLoginForm'])->name('l
 Route::post('/login', [RegisterLoginController::class, 'login'])->name('login.store');
 Route::post('/logout', [RegisterLoginController::class, 'logout'])->name('logout');
 
+// Home route - no login required
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
+
 // Protected routes for authenticated users (payment functionality)
 Route::middleware(['auth'])->group(function () {
     // Pembayaran routes
     Route::post('/pembayaran', [PembayaranController::class, 'store'])->name('pembayaran.store');
-    
-    // Home route
-    Route::get('/home', function () {
-        return view('home');
-    })->name('home');
 });
 
 // Admin routes, only accessible by admin users

@@ -38,10 +38,6 @@ class PageController extends Controller
     {
         return view('sekolah-kami');
     }
-    public function loginRegister()
-    {
-        return view('login-register');
-    }
     public function pembayaran()
     {
         return view('pembayaran');

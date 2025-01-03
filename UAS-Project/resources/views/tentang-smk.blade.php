@@ -76,6 +76,9 @@
         <h2>Visi dan Misi</h2>
         <p>Visi: Menjadi lembaga pendidikan kejuruan unggulan yang mencetak generasi profesional di bidang teknologi informasi dan komunikasi, berkarakter, dan siap bersaing di era global.</p>
         <p>Misi: Menyelenggarakan pendidikan berbasis teknologi informasi yang inovatif untuk mencetak siswa berkarakter unggul, berkompeten, dan siap menghadapi tantangan dunia kerja.</p>
+        <div class="col-12 col-md-4 mb-3">
+                <img src="Gambar/siswa2.jpeg" alt="Pembelajaran" class="gallery-img img-fluid w-100">
+            </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const images = document.querySelectorAll('.image-slider img');

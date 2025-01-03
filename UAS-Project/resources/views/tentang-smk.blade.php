@@ -72,69 +72,11 @@
 </head>
 <body>
     @include('partials.header')
-    <section id="tentang-smk">
+    <section id="tentang-smk" class="text-white" style="background-image: url('{{ asset('Gambar/images.jpg') }}'); background-size: cover; background-position: center;">
         <h2>Visi dan Misi</h2>
         <p>Visi: Menjadi lembaga pendidikan kejuruan unggulan yang mencetak generasi profesional di bidang teknologi informasi dan komunikasi, berkarakter, dan siap bersaing di era global.</p>
         <p>Misi: Menyelenggarakan pendidikan berbasis teknologi informasi yang inovatif untuk mencetak siswa berkarakter unggul, berkompeten, dan siap menghadapi tantangan dunia kerja.</p>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = document.querySelectorAll('.image-slider img');
-            const nextButton = document.getElementById('next');
-            const prevButton = document.getElementById('prev');
-            let currentIndex = 0;
-            let intervalId;
-    
-            // Update slider visibility
-            function updateSlider(index) {
-                images.forEach((img, i) => {
-                    img.classList.toggle('visible', i === index);
-                });
-            }
-    
-            // Move to the next image
-            function goToNextSlide() {
-                currentIndex = (currentIndex + 1) % images.length;
-                updateSlider(currentIndex);
-            }
-    
-            // Move to the previous image
-            function goToPrevSlide() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                updateSlider(currentIndex);
-            }
-    
-            // Start auto-sliding
-            function startAutoSlide() {
-                intervalId = setInterval(goToNextSlide, 5000);
-            }
-    
-            // Stop auto-sliding
-            function stopAutoSlide() {
-                clearInterval(intervalId);
-            }
-    
-            // Event listeners for manual navigation
-            nextButton.addEventListener('click', () => {
-                stopAutoSlide();
-                goToNextSlide();
-                startAutoSlide();
-            });
-    
-            prevButton.addEventListener('click', () => {
-                stopAutoSlide();
-                goToPrevSlide();
-                startAutoSlide();
-            });
-    
-            // Pause auto-slide on hover
-            const slider = document.querySelector('.image-slider');
-            slider.addEventListener('mouseenter', stopAutoSlide);
-            slider.addEventListener('mouseleave', startAutoSlide);
-    
-            // Initialize
-            startAutoSlide();
-        });
-    </script>
-    
+    </section>    
+    @include('partials.footer')
 </body>
 </html>

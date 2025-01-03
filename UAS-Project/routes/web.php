@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterLoginController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\SekolahKamiController;
 use App\Http\Controllers\PembelajaranController;
+use Illuminate\Support\Facades\Auth;
 
 // Public routes for the about, school, registration, and other pages
 Route::get('/tentang-smk', [TentangSMKController::class, 'index'])->name('tentang-smk');
@@ -48,3 +49,12 @@ Route::middleware(['admin'])->group(function () {
 Route::get('/', function () {
     return redirect()->route('home');
 });
+
+Route::post('/logout', function () {
+    Auth::logout();
+    
+    session()->invalidate();
+    session()->regenerateToken();
+    
+    return redirect()->route('home');
+})->name('logout');

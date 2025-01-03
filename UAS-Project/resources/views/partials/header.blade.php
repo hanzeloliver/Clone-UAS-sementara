@@ -44,14 +44,14 @@
                         <!-- Conditional Login/Logout Link -->
                         @if (Auth::check())
                             <li class="nav-item">
-                                <a class="nav-link text-primary" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                <a class="nav-link text-primary" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link text-primary" href="#">Login</a>
+                                <a class="nav-link text-primary" href="{{ route('login') }}">Login</a>
                             </li>
                         @endif
                     </ul>

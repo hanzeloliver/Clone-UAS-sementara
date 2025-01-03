@@ -77,20 +77,6 @@
         <p>Visi: Menjadi lembaga pendidikan kejuruan unggulan yang mencetak generasi profesional di bidang teknologi informasi dan komunikasi, berkarakter, dan siap bersaing di era global.</p>
         <p>Misi: Menyelenggarakan pendidikan berbasis teknologi informasi yang inovatif untuk mencetak siswa berkarakter unggul, berkompeten, dan siap menghadapi tantangan dunia kerja.</p>
     
-        <h2>Fasilitas</h2>
-        <div class="image-gallery">
-            <div class="image-slider">
-                <img src="{{ asset('images/image1.jpg') }}" alt="Lab Komputer" class="visible">
-                <img src="{{ asset('images/image2.jpg') }}" alt="Perpustakaan">
-                <img src="{{ asset('images/image3.jpg') }}" alt="Lapangan Olahraga">
-            </div>
-            <div class="slider-controls">
-                <button id="prev" aria-label="Previous Slide">Prev</button>
-                <button id="next" aria-label="Next Slide">Next</button>
-            </div>
-        </div>
-    </section>
-    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const images = document.querySelectorAll('.image-slider img');

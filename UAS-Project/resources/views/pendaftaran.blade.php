@@ -4,20 +4,17 @@
     @include('partials.head')
     <title>Pendaftaran</title>
     <style>
-        /* General Styles */
         h2 {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Form Container */
         #pendaftaran {
             background-color: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
         }
 
-        /* Form Styles */
         form {
             display: flex;
             flex-direction: column;
@@ -28,7 +25,6 @@
             font-weight: bold;
         }
 
-        /* Adjust button styles if needed */
         button {
             padding: 10px 20px;
             background-color: #4CAF50;
@@ -45,13 +41,13 @@
     </style>
 </head>
 <body>
-    @include('partials.header') <!-- Include Header -->
+    @include('partials.header')
 
-    <!-- Main Content Section -->
     <section id="pendaftaran" class="container my-5">
         <h2>Formulir Pendaftaran</h2>
         <form method="POST" action="{{ route('pendaftaran.store') }}" enctype="multipart/form-data">
             @csrf
+
             <div class="mb-3">
                 <label for="nama_lengkap" class="form-label">Nama Lengkap:</label>
                 <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" required>
@@ -81,19 +77,59 @@
             </div>
 
             <div class="mb-3">
+                <label for="tahun_lulus_smp" class="form-label">Tahun Lulus SMP:</label>
+                <input type="number" name="tahun_lulus_smp" id="tahun_lulus_smp" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nama_orangtua" class="form-label">Nama Orang Tua:</label>
+                <input type="text" name="nama_orangtua" id="nama_orangtua" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="no_hp_orangtua" class="form-label">No. HP Orang Tua:</label>
+                <input type="text" name="no_hp_orangtua" id="no_hp_orangtua" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="daerah_asal" class="form-label">Daerah Asal:</label>
+                <input type="text" name="daerah_asal" id="daerah_asal" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="jenjang_pendidikan_terakhir" class="form-label">Jenjang Pendidikan Terakhir:</label>
+                <input type="text" name="jenjang_pendidikan_terakhir" id="jenjang_pendidikan_terakhir" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="tahun_masuk" class="form-label">Tahun Masuk:</label>
+                <input type="number" name="tahun_masuk" id="tahun_masuk" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
                 <label for="asal_sekolah" class="form-label">Asal Sekolah:</label>
                 <input type="text" name="asal_sekolah" id="asal_sekolah" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="ijazah_smp" class="form-label">Foto Ijazah:</label>
+                <label for="negara_asal_sekolah" class="form-label">Negara Asal Sekolah:</label>
+                <input type="text" name="negara_asal_sekolah" id="negara_asal_sekolah" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="kota_asal_sekolah" class="form-label">Kota Asal Sekolah:</label>
+                <input type="text" name="kota_asal_sekolah" id="kota_asal_sekolah" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ijazah_smp" class="form-label">Upload Ijazah SMP:</label>
                 <input type="file" name="ijazah_smp" id="ijazah_smp" accept=".jpg,.jpeg,.png,.pdf" class="form-control" required>
             </div>
 
             <button type="submit" class="btn btn-success">Daftar</button>
-        </form>        
+        </form>
     </section>
 
-    @include('partials.footer') <!-- Include Footer -->
+    @include('partials.footer')
 </body>
 </html>

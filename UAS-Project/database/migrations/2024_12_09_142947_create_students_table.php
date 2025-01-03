@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('nama_lengkap')->unique();
             $table->integer('umur');
             $table->date('tanggal_lahir');
             $table->enum('gender', ['Laki-laki', 'Perempuan']);
@@ -31,6 +30,7 @@ return new class extends Migration
             $table->binary('ijazah_smp');
             $table->timestamps();
         });
+        
     }
 
     /**

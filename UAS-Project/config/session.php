@@ -88,6 +88,7 @@ return [
 
     'table' => env('SESSION_TABLE', 'sessions'),
 
+
     /*
     |--------------------------------------------------------------------------
     | Session Cache Store
